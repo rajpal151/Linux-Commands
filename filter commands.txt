@@ -1,0 +1,24 @@
+Linux Filter Commands:
+======================
+cat: creating files and stdout content
+cut: Used to cut a specific section by bytes, we can also use delimiter-   syntax: cut -d- -f1(column) filename //example: cut -d- -f2 sample.txt
+
+grep: Used to filter the command and also used with pipe (|)- 		   syntax: cat (filename) | grep (want to search) //example: cat marks.txt | grep raj
+
+comm: Compare two files or streams -	syntax: comm file1 file2	//example: comm exam1.txt exam2.txt
+
+sed: Used for edit streams or can be used to replace text - syntax: sed [option] {script} {input file}  //example: echo class7 | sed 's/class/jtp' 
+
+tee: its similar to cat but it puts stdin on stdout and also put them in a file: syntax: tee (option) <filename> //example: cat marks.txt | tee newfile.txt
+
+tr: translates from lowercase to uppercase or visa versa- syntax: command | tr <old> <new> //example: cat marks.txt | tr ajay 'AJAY'
+
+uniq: used to remove repeated lines from a file- syntax: uniq [option] [input][output] //example: sort marks.txt | uniq
+
+wc: used for counting words, lines and characters - syntax: wc [option] [file] //example: wc marks.txt
+
+od: displays the content of a file in different readable format- syntax: od -b <filename> (displays in octal format) //example: od -c marks.txt
+
+sort: sorts the file in an alphabetical order - syntax: sort filename //example: sort marks.txt		//example2: sort -k marks.txt (sort column)
+
+gzip: GNU zip is a compressing tool - syntax: gzip <file> <file2> <file3> //example:  cat file1.txt file2.txt | gzip > final.gz (compressing to txt files in one)
