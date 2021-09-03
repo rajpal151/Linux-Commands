@@ -1,0 +1,48 @@
+System-Admin commands: LINUX
+-----------------------------
+.(curl): To test application endpoint or connectivity: 
+//example:
+$curl -O ftp://speedtest.tele2.net/1MB.zip		(-O will download the files and saves it with same name)
+
+$curl curl -C - -O ftp://speedtest.tele2.net/1MB.zip	(-c resumes the download which has been stoped)
+
+$curl -u demo:password -O ftp://test.rebex.net/readme.txt 	(-u provides options to download files from user authenticated FTP Servers)
+
+OPTIONS:
+-T (Helps to upload file to FTP server)
+-x (curl also lets us use a proxy to access the URL.)
+-proxy (curl also lets us use a proxy to access the URL.)
+-libcurl (it outputs the C source code that uses libcurl for the specified option.)
+==================================================================================
+
+.How to read JSON API call through python:
+
+example: $cat test.json | python -m json.tool		(pipe the output with -m module option)
+==================================================================================
+
+.(ps): Show the status of running process
+Example:	$ps -ef 
+for more :  	$ps -ef | grep tomcat		(search for tomcat process)
+==================================================================================
+
+.(env): env allows you to set or print the environment variables.(Used in troubleshooting)
+Example: 	$env
+==================================================================================
+ 
+.(netstat): netstat shows the network status. shows the ports in use.
+Example: $netstat -tulpn 	equivalent to netstat -t -u -l -p -n (tcp, udp, listening, program, numeric)
+==================================================================================
+
+.(df): df is diskspace check to troubleshoot free disk space in system
+Example:	$df -h (-h is human readable format)
+==================================================================================
+
+.(nslookup): To figure out why the application cant seem to resolve the database
+Example: 	nslookup mydatabase	(if it shows that mydatabase cant be reolved try to solve with (dig))
+		dig mydatabase
+==================================================================================
+
+.(firewall-cmd): controls the inbound and outbound traffic for your system
+Example: 	$firewall-cmd --get-activate-zones	(to see in what zones your are currently working in)
+Adding services	$firewall-cmd --add service http --permanent
+reloading	$firewall-cmd 
